@@ -69,7 +69,7 @@ const canvas = exportToCanvas(
   {}, // files
   {
     exportBackground: true,
-    viewBackgroundColor: "#ffffff",
+    viewBackgroundColor: "#000",
   },
   createCanvas,
 );

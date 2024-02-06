@@ -21,7 +21,7 @@ export type ColorPickerColor =
 export type ColorTuple = readonly [string, string, string, string, string];
 export type ColorPalette = Merge<
   Record<ColorPickerColor, ColorTuple>,
-  { black: "#1e1e1e"; white: "#ffffff"; transparent: "transparent" }
+  { black: "#1f1f1f"; white: "#ffffff"; transparent: "transparent" }
 >;
 
 // used general type instead of specific type (ColorPalette) to support custom colors
@@ -50,7 +50,7 @@ export const getSpecificColorShades = (
 
 export const COLOR_PALETTE = {
   transparent: "transparent",
-  black: "#1e1e1e",
+  black: "#1f1f1f",
   white: "#ffffff",
   // open-colors
   gray: getSpecificColorShades("gray", ELEMENTS_PALETTE_SHADE_INDEXES),
@@ -87,7 +87,7 @@ const COMMON_ELEMENT_SHADES = pick(COLOR_PALETTE, [
 
 // ORDER matters for positioning in quick picker
 export const DEFAULT_ELEMENT_STROKE_PICKS = [
-  COLOR_PALETTE.black,
+  COLOR_PALETTE.white,
   COLOR_PALETTE.red[DEFAULT_ELEMENT_STROKE_COLOR_INDEX],
   COLOR_PALETTE.green[DEFAULT_ELEMENT_STROKE_COLOR_INDEX],
   COLOR_PALETTE.blue[DEFAULT_ELEMENT_STROKE_COLOR_INDEX],
@@ -125,7 +125,7 @@ export const DEFAULT_ELEMENT_STROKE_COLOR_PALETTE = {
   transparent: COLOR_PALETTE.transparent,
   white: COLOR_PALETTE.white,
   gray: COLOR_PALETTE.gray,
-  black: COLOR_PALETTE.black,
+  black: COLOR_PALETTE.white,
   bronze: COLOR_PALETTE.bronze,
   // rest
   ...COMMON_ELEMENT_SHADES,
@@ -136,7 +136,7 @@ export const DEFAULT_ELEMENT_BACKGROUND_COLOR_PALETTE = {
   transparent: COLOR_PALETTE.transparent,
   white: COLOR_PALETTE.white,
   gray: COLOR_PALETTE.gray,
-  black: COLOR_PALETTE.black,
+  black: COLOR_PALETTE.white,
   bronze: COLOR_PALETTE.bronze,
 
   ...COMMON_ELEMENT_SHADES,

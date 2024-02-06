@@ -171,7 +171,7 @@ const commonProps = {
   fontSize: DEFAULT_FONT_SIZE,
   opacity: 100,
   roughness: 1,
-  strokeColor: COLOR_PALETTE.black,
+  strokeColor: COLOR_PALETTE.white,
   roundness: null,
   strokeStyle: "solid",
   strokeWidth: 1,
@@ -337,7 +337,7 @@ const chartBaseElements = (
         y: y - chartHeight,
         width: chartWidth,
         height: chartHeight,
-        strokeColor: COLOR_PALETTE.black,
+        strokeColor: COLOR_PALETTE.white,
         fillStyle: "solid",
         opacity: 6,
       })

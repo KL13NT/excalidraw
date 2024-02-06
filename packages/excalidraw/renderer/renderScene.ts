@@ -566,7 +566,7 @@ const _renderInteractiveScene = ({
         elementsMap,
       );
     }
-    const selectionColor = renderConfig.selectionColor || oc.black;
+    const selectionColor = renderConfig.selectionColor || oc.white;
 
     if (showBoundingBox) {
       // Optimisation for finding quickly relevant element ids
@@ -636,7 +636,7 @@ const _renderInteractiveScene = ({
           elementX2,
           elementY1,
           elementY2,
-          selectionColors: [oc.black],
+          selectionColors: [oc.white],
           dashed: true,
           cx: elementX1 + (elementX2 - elementX1) / 2,
           cy: elementY1 + (elementY2 - elementY1) / 2,
@@ -847,7 +847,7 @@ const _renderInteractiveScene = ({
       } else {
         roundRect(context, boxX, boxY, boxWidth, boxHeight, 8, oc.white);
       }
-      context.fillStyle = oc.black;
+      context.fillStyle = oc.white;
 
       context.fillText(
         username,
